@@ -1,0 +1,350 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style-type: none;
+}
+/* @font-face {
+    font-family: boom; Имя шрифта
+    src: url(fonts/boomboom/Boomboom.otf); Путь к файлу со шрифтом
+} */
+@font-face {
+    font-family: Troika; /* Имя шрифта */
+    src: url(fonts/troika.otf);
+}
+body{
+	background: url(img/bg.png);
+	background-attachment: fixed;
+	font-family: Troika;
+	color: #282828;
+}
+/*----------Common styles for Wrapper, Menu, footer ----------*/
+.wrapper, .menu .container, .footer .container{
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+	margin: 0 15px;
+}
+/*---------- Menu ----------*/
+.menu .container{
+	overflow: hidden;
+}
+.nav li{
+	list-style-type: none;
+	display: inline-block;
+}
+.nav li a{
+	display: block;
+	color: #fff;
+	font-size: 25px;
+	padding: 15px;
+	transition: all .1s ease-in-out;
+}
+.nav li a:hover{
+	background-color: rgba(255,255,255, .1);
+}
+#onebtn span{
+	display: block;
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin-top: 5px;
+}
+
+.menu, #onebtn{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0 20px;
+	background-color: #C43333;
+	box-shadow: 3px 3px 15px rgba(0,0,0, .7);
+	-o-box-shadow: 3px 3px 15px rgba(0,0,0, .7);
+	-moz-box-shadow: 3px 3px 15px rgba(0,0,0, .7);
+	-webkit-box-shadow: 3px 3px 15px rgba(0,0,0, .7);
+	z-index: 10;
+}
+.clear{
+	display: block;
+	clear: both;
+}
+#onebtn{
+	display: none;
+	padding: 10px;
+}
+/*---------- Search form ----------*/
+.search{
+	float: right;
+	margin-top: 14px;
+	margin-right: 30px;
+}
+.search input[type="search"]{
+	border-radius: 30px;
+	height: 30px;
+	padding: 0 10px;
+	outline: 0;
+}
+/*---------- Header ---------*/
+.header {
+	padding-top: 90px;
+	color: #fff;
+	overflow: hidden;
+	height: 430px;
+}
+.logo{
+	width: 348px;
+	margin: 0 auto;
+}
+#logo{
+    position: relative;
+    left: 0;
+    top: 0;
+}
+#logo:before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 9px;
+    background: url(img/Spark.png) no-repeat;
+    position: absolute;
+    top: 11px;
+    left: 147px;
+    opacity: 0;
+    transition: opacity .2s, transform .9s;
+    transform: rotate(0deg);
+    
+}
+#logo:hover::before{
+    opacity: 1;
+    transform: rotate(360deg);
+   
+}
+ .header h1{
+ 	text-align: center;
+	font: 50px Troika;
+	margin: 20px 0;
+	text-shadow: -5px -3px 3px rgba(0,0,0, 1);
+}
+ .header h1 a{
+	color: #fff;
+	transition: all .1s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+ }
+.header h1 a:hover{
+	color: #282828;
+	border-top: 3px solid #282828;
+	border-bottom: 3px solid #282828;
+}
+.header h3{
+	text-align: center;
+	font: 35px Troika;
+	padding-bottom: 10px;
+}
+/*--------- Content ----------*/
+.content{
+	padding: 20px 0;
+	height: auto;
+	overflow: hidden;
+}
+.sidebar{
+	float: left;
+	width: 30%;
+}
+/*--------- Content for posts ----------*/
+.posts-content{
+	width: 70%;
+	float: right;
+}
+.posts{
+	width: 95%;
+	margin: 0 auto;
+}
+.post{
+	background: #fff;
+	font-family: Arial, sans-serif;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.post h1 a{
+	font-family: Troika;
+	color: #fff;
+}
+.post h1 a:hover{
+	text-decoration: underline;
+}
+.icon-push{
+	background: url(img/sports-icons/32px/99w.png) center no-repeat;
+}
+.post-content{
+	padding: 15px;
+	font-size: 17px;
+	line-height: 25px;
+}
+.post-content a{
+	margin: 10px 0;
+	display: block;
+	color: #282828;
+	font-weight: bold;
+}
+.post-content a:hover{
+	text-decoration: underline;
+}
+.prev{
+	float: left;
+	margin-right: 10px;
+}
+/*--------- Sidebar content ----------*/
+.widget{
+	width: 90%;
+	margin: 0 auto;
+	box-shadow: 3px 3px 15px rgba(0,0,0, .7);
+	-o-box-shadow: 3px 3px 15px rgba(0,0,0, .7);
+	-moz-box-shadow: 3px 3px 15px rgba(0,0,0, .7);
+	-webkit-box-shadow: 3px 3px 15px rgba(0,0,0, .7);
+}
+.widget h1, .post h1{
+	font-size: 27px;
+	text-align: center;
+	color: #fff;
+	background-color: #C43333;
+	padding: 5px;
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-o-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+}
+.widget h1 a{
+	color: #fff;
+}
+.widget h1 a:hover{
+	text-decoration: underline;
+}
+.widget ul{
+	padding: 15px 0;
+	list-style-type: none;
+	background-color: #fff;
+	border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	-o-border-radius: 0 0 3px 3px;
+	-webkit-border-radius: 0 0 3px 3px;
+}
+.widget ul li a{
+	font-size: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	color: #282828;
+	padding: 10px;
+	position: relative;
+	z-index: 1;
+}
+.widget ul li a:hover::before{
+	content:"";
+	background: url(img/sports-icons/32px/39.png) center no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+	margin: 0 15px;
+	position: absolute;
+	left:0;
+	top: 9px;
+}
+.icon-cat{
+	background: url(img/sports-icons/32px/51w.png) center no-repeat;
+}
+/*--------- Footer ----------*/
+.footer{
+	background: rgba(40, 40, 40, .5);
+	color: #fff;
+	overflow: hidden;
+	margin-top: 20px;
+	padding: 20px 0;
+	width: 100%;
+}
+.mini-logo .container{
+	width: 50%;
+}
+.mini-logo img{
+	display: block;
+	width: 100px;
+	height: auto;
+	margin: 0 auto 10px;
+}
+.mini-logo p{
+	width: 160px;
+}
+.mini-logo .container{
+	width: 160px;
+	margin: 0 auto;
+}
+/* .footer-widjet .container{
+	margin: 0 auto;
+	width: 130px;
+}
+.footer-widjet h1 a{
+	font-size: 28px;
+}
+.footer-widjet a{
+	color: #fff;
+	font-size: 17px;
+}
+
+.footer-widjet a:hover{
+	color: #C43333;
+} */
+/*--------- Adaptive ----------*/
+@media screen and (max-width: 965px){
+	#onebtn{
+		display: block;
+	}
+	.menu{
+		padding: 0;
+	}
+	.nav, .nav li, .nav li a{
+		display: block;
+		background: #fff;
+		color: #282828;
+		text-align: center;
+	}
+	.nav{
+		position: absolute;
+		top: 50px;
+		left: 0;
+		right: 0;
+		display: none;
+	}
+}
+@media screen and (max-width: 768px){
+	.contet{
+		overflow: auto;
+	}
+	.posts-content{
+		width: 100%;
+	}
+	.sidebar{
+		width: 100%;
+
+	}
+/* 	.mini-logo, .footer-widjet{
+width: 100%;
+float: none;
+}
+.mini-logo{
+	margin-bottom: 30px;
+} */
+}
